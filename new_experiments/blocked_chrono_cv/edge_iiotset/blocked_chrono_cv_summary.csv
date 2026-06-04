@@ -1,0 +1,16 @@
+controller,metric,mean,std,n_folds
+NoControl,goodput,1.0,0.0,3
+NoControl,attack_mitigation_rate,0.0,0.0,3
+NoControl,benign_drop_rate,0.0,0.0,3
+Greedy,goodput,0.0,0.0,3
+Greedy,attack_mitigation_rate,1.0,0.0,3
+Greedy,benign_drop_rate,1.0,0.0,3
+CARA-TC,goodput,0.9712884334276978,0.008343767418171534,3
+CARA-TC,attack_mitigation_rate,0.960613220511861,0.01384119802731868,3
+CARA-TC,benign_drop_rate,0.028655745868403092,0.008250455398942879,3
+DQN-TFC-val,goodput,0.883992561693775,0.07138933727171926,3
+DQN-TFC-val,attack_mitigation_rate,0.870382359833651,0.015890902980052534,3
+DQN-TFC-val,benign_drop_rate,0.11252978187056595,0.07720411768873943,3
+PPO-TFC-val,goodput,0.9303194679693543,0.042810407908819834,3
+PPO-TFC-val,attack_mitigation_rate,0.3188913334918653,0.08840492587851445,3
+PPO-TFC-val,benign_drop_rate,0.06968053203064577,0.04281040790881985,3

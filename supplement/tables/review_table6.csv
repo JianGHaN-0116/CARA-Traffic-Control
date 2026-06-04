@@ -1,0 +1,5 @@
+Variant,Features,Detector Acc.,Detector F1,BenSafe,StrictAtkMit,BenDrop,SCCL
+full_features,41,0.9922,0.9954,0.8494,0.9975,0.1506,4.342
+no_endpoint_stream_ids,30,0.8971,0.9419,0.3461,0.9516,0.6539,4.1406
+no_endpoint_stream_or_protocol_tags,21,0.8973,0.942,0.3391,0.9536,0.6609,4.1356
+size_timing_only,8,0.8884,0.9378,0.2265,0.9716,0.7735,4.0633

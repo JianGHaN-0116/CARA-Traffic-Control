@@ -1,0 +1,62 @@
+table_id,experiment,split,window_size,stride,calibration,detector,controller,seed,metric,value,std,script,commit,notes
+T6,feature_ablation,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,BenSafe,0.8494,,scripts/reproduce_feature_ablation.py,,full_features
+T6,feature_ablation,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,StrictAtkMit,0.9975,,scripts/reproduce_feature_ablation.py,,full_features
+T6,feature_ablation,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,BenDrop,0.1506,,scripts/reproduce_feature_ablation.py,,full_features
+T6,feature_ablation,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,BenSafe,0.3461,,scripts/reproduce_feature_ablation.py,,no_endpoint_stream_ids
+T6,feature_ablation,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,StrictAtkMit,0.9516,,scripts/reproduce_feature_ablation.py,,no_endpoint_stream_ids
+T6,feature_ablation,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,BenDrop,0.6539,,scripts/reproduce_feature_ablation.py,,no_endpoint_stream_ids
+T6,feature_ablation,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,BenSafe,0.2265,,scripts/reproduce_feature_ablation.py,,size_timing_only
+T6,feature_ablation,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,StrictAtkMit,0.9716,,scripts/reproduce_feature_ablation.py,,size_timing_only
+T6,feature_ablation,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,BenDrop,0.7735,,scripts/reproduce_feature_ablation.py,,size_timing_only
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,NoControl,0,BenSafe,1.0000,0.0000,scripts/select_controllers.py,,
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,NoControl,0,StrictAtkMit,0.0000,0.0000,scripts/select_controllers.py,,
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,NoControl,0,BenDrop,0.0000,0.0000,scripts/select_controllers.py,,
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,Greedy,0,BenSafe,0.0001,0.0000,scripts/select_controllers.py,,
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,Greedy,0,StrictAtkMit,1.0000,0.0000,scripts/select_controllers.py,,
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,Greedy,0,BenDrop,0.9999,0.0000,scripts/select_controllers.py,,
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,BenSafe,0.9697,0.0000,scripts/select_controllers.py,,
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,StrictAtkMit,0.9508,0.0000,scripts/select_controllers.py,,
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,BenDrop,0.0303,0.0000,scripts/select_controllers.py,,
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,DQN-TFC-val,0,BenSafe,0.9705,0.0057,scripts/select_controllers.py,,mean across seeds
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,DQN-TFC-val,0,StrictAtkMit,0.9290,0.0073,scripts/select_controllers.py,,mean across seeds
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,DQN-TFC-val,0,BenDrop,0.0295,0.0057,scripts/select_controllers.py,,mean across seeds
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,PPO-TFC-val,0,BenSafe,0.7783,0.2243,scripts/select_controllers.py,,mean across seeds
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,PPO-TFC-val,0,StrictAtkMit,0.7931,0.0673,scripts/select_controllers.py,,mean across seeds
+T7,main_comparison,corrected_random,100,1,validation_tuned,xgboost,PPO-TFC-val,0,BenDrop,0.2217,0.2243,scripts/select_controllers.py,,mean across seeds
+T9,cross_dataset,cic_frozen,100,1,frozen,xgboost,CARA-TC,0,BenSafe,1.0000,0.0000,scripts/cic_cross_dataset.py,,edge-val frozen
+T9,cross_dataset,cic_frozen,100,1,frozen,xgboost,CARA-TC,0,StrictAtkMit,0.1675,0.0000,scripts/cic_cross_dataset.py,,edge-val frozen
+T9,cross_dataset,cic_frozen,100,1,frozen,xgboost,CARA-TC,0,BenDrop,0.0000,0.0000,scripts/cic_cross_dataset.py,,edge-val frozen
+T9,cross_dataset,cic_retuned,100,1,validation_tuned,xgboost,CARA-TC,0,BenSafe,0.9769,0.0000,scripts/cic_cross_dataset.py,,cic-val retuned
+T9,cross_dataset,cic_retuned,100,1,validation_tuned,xgboost,CARA-TC,0,StrictAtkMit,0.9976,0.0000,scripts/cic_cross_dataset.py,,cic-val retuned
+T9,cross_dataset,cic_retuned,100,1,validation_tuned,xgboost,CARA-TC,0,BenDrop,0.0231,0.0000,scripts/cic_cross_dataset.py,,cic-val retuned
+T12,chronological,chronological,100,1,validation_tuned,xgboost,CARA-TC,0,BenSafe,0.4160,0.0000,scripts/chronological_split.py,,extreme stress test
+T12,chronological,chronological,100,1,validation_tuned,xgboost,CARA-TC,0,StrictAtkMit,1.0000,0.0000,scripts/chronological_split.py,,extreme stress test
+T12,chronological,chronological,100,1,validation_tuned,xgboost,CARA-TC,0,BenDrop,0.5840,0.0000,scripts/chronological_split.py,,extreme stress test
+T13,non_overlap,non_overlap,100,1,validation_tuned,xgboost,CARA-TC,0,BenSafe,0.9557,0.0000,scripts/nonoverlap_split.py,,
+T13,non_overlap,non_overlap,100,1,validation_tuned,xgboost,CARA-TC,0,StrictAtkMit,0.9315,0.0000,scripts/nonoverlap_split.py,,
+T13,non_overlap,non_overlap,100,1,validation_tuned,xgboost,CARA-TC,0,BenDrop,0.0443,0.0000,scripts/nonoverlap_split.py,,
+T17,ovs_replay,ovs_compact,100,1,validation_tuned,xgboost,CARA-TC,0,Benign_TCP_Mbps,42.8,,scripts/ovs_replay.py,,compact executability check
+T17,ovs_replay,ovs_compact,100,1,validation_tuned,xgboost,CARA-TC,0,Benign_UDP_Mbps,36.5,,scripts/ovs_replay.py,,compact executability check
+T17,ovs_replay,ovs_compact,100,1,validation_tuned,xgboost,CARA-TC,0,Attack_Suppression,98.3,,scripts/ovs_replay.py,,compact executability check
+T17,ovs_replay,ovs_compact,100,1,validation_tuned,xgboost,CARA-TC,0,Benign_Loss,3.4,,scripts/ovs_replay.py,,compact executability check
+T17,ovs_replay,ovs_compact,100,1,validation_tuned,xgboost,CARA-TC,0,Rule_Install_Latency_ms,4.5,,scripts/ovs_replay.py,,compact executability check
+T30,score_calibration,corrected_random,100,1,raw,xgboost,CARA-TC,0,ECE,0.3457,,scripts/score_calibration.py,,
+T30,score_calibration,corrected_random,100,1,raw,xgboost,CARA-TC,0,BenSafe,0.9348,,scripts/score_calibration.py,,
+T30,score_calibration,corrected_random,100,1,raw,xgboost,CARA-TC,0,StrictAtkMit,0.8070,,scripts/score_calibration.py,,
+T30,score_calibration,corrected_random,100,1,platt,xgboost,CARA-TC,0,ECE,0.0100,,scripts/score_calibration.py,,
+T30,score_calibration,corrected_random,100,1,platt,xgboost,CARA-TC,0,BenSafe,0.9713,,scripts/score_calibration.py,,
+T30,score_calibration,corrected_random,100,1,platt,xgboost,CARA-TC,0,StrictAtkMit,0.9510,,scripts/score_calibration.py,,
+T_ep_disjoint,endpoint_disjoint,ep_disjoint,100,1,validation_tuned,xgboost,CARA-TC,0,BenSafe,0.7412,0.0000,scripts/endpoint_disjoint.py,,CONSERVATIVE VERSION - USE THIS
+T_ep_disjoint,endpoint_disjoint,ep_disjoint,100,1,validation_tuned,xgboost,CARA-TC,0,StrictAtkMit,0.8834,0.0000,scripts/endpoint_disjoint.py,,CONSERVATIVE VERSION - USE THIS
+T_ep_disjoint,endpoint_disjoint,ep_disjoint,100,1,validation_tuned,xgboost,CARA-TC,0,BenDrop,0.2588,0.0000,scripts/endpoint_disjoint.py,,CONSERVATIVE VERSION - USE THIS
+T_blocked_chrono,blocked_chrono_cv,blocked_chrono,100,1,fold_val,xgboost,CARA-TC,0,BenSafe,0.9713,0.0083,scripts/blocked_chrono_cv.py,,3-fold mean
+T_blocked_chrono,blocked_chrono_cv,blocked_chrono,100,1,fold_val,xgboost,CARA-TC,0,StrictAtkMit,0.9606,0.0138,scripts/blocked_chrono_cv.py,,3-fold mean
+T_blocked_chrono,blocked_chrono_cv,blocked_chrono,100,1,fold_val,xgboost,CARA-TC,0,BenDrop,0.0287,0.0083,scripts/blocked_chrono_cv.py,,3-fold mean
+T_no_rho,no_rho_ablation,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,BenSafe_with_rho,0.8834,,scripts/no_rho_ablation.py,,
+T_no_rho,no_rho_ablation,corrected_random,100,1,validation_tuned,xgboost,CARA-TC,0,BenSafe_no_rho,0.8834,,scripts/no_rho_ablation.py,,ranking unchanged
+T_attack_family,attack_family_holdout,ddos_heldout,100,1,validation_tuned,xgboost,CARA-TC,0,BenSafe,1.0000,,scripts/attack_family_holdout.py,,DDoS held out
+T_attack_family,attack_family_holdout,ddos_heldout,100,1,validation_tuned,xgboost,CARA-TC,0,StrictAtkMit,0.0000,,scripts/attack_family_holdout.py,,DDoS held out - all controllers collapse
+T_attack_family,attack_family_holdout,mitm_heldout,100,1,validation_tuned,xgboost,CARA-TC,0,BenSafe,1.0000,,scripts/attack_family_holdout.py,,MITM held out
+T_attack_family,attack_family_holdout,mitm_heldout,100,1,validation_tuned,xgboost,CARA-TC,0,StrictAtkMit,0.0000,,scripts/attack_family_holdout.py,,MITM held out - all controllers collapse
+T_attack_family,attack_family_holdout,other_attack_heldout,100,1,validation_tuned,xgboost,CARA-TC,0,BenSafe,1.0000,,scripts/attack_family_holdout.py,,Other Attack held out
+T_attack_family,attack_family_holdout,other_attack_heldout,100,1,validation_tuned,xgboost,CARA-TC,0,StrictAtkMit,0.1379,,scripts/attack_family_holdout.py,,Other Attack held out

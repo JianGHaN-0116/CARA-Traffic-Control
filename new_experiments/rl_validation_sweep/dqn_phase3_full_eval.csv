@@ -1,0 +1,4 @@
+algorithm,config_name,tuning,seed,scenario,bensafe,atkmit,bendrop,avg_reward,avg_latency,sccl
+dqn,exploration_final_eps_0.01__exploration_fraction_0.4__learning_rate_0.0003__arch_128x128__rnorm_False,val-selected,42,edge_overlap,0.9652338811630847,0.9374231452384205,0.0347661188369153,0.35570894451023494,3.986923411592044,0.4437914406429976
+dqn,exploration_final_eps_0.01__exploration_fraction_0.4__learning_rate_0.0003__arch_128x128__rnorm_False,val-selected,2024,edge_overlap,0.9766118836915297,0.9248531220112037,0.02338811630847029,0.383138955376053,4.022924207209408,0.44585315678128357
+dqn,exploration_final_eps_0.01__exploration_fraction_0.4__learning_rate_0.0003__arch_128x128__rnorm_False,val-selected,2025,edge_overlap,0.9695954487989886,0.9245798606366991,0.03040455120101138,0.3612598442646406,3.98832922462266,0.4421248902684587

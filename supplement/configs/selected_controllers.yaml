@@ -1,0 +1,158 @@
+# Selected Controller Configurations
+# Generated from validation-selection protocol (Phase 1-3 sweep)
+# This file summarizes the final configurations used in all paper experiments.
+
+cara_tc:
+  selection_dataset: edge_iiotset
+  selection_split: validation (10%)
+  grid_size: 5400
+  selection_score_formula: "0.35*bensafe + 0.35*atkmit - 0.15*bendrop + 0.15*(1-norm_latency)"
+  selected:
+    conf_strict: 0.85
+    isolate_confidence: 0.90
+    detector_ratio_strict: 0.80
+    queue_threshold: 0.65
+    link_threshold: 0.65
+
+cara_tc_cic_retuned:
+  selection_dataset: cicids2017
+  selection_split: validation (4089 windows)
+  grid_size: 5400
+  selection_score_formula: "0.35*bensafe + 0.35*atkmit - 0.15*bendrop + 0.15*(1-norm_latency)"
+  selected:
+    conf_strict: 0.75
+    isolate_confidence: 0.85
+    detector_ratio_strict: 0.65
+    queue_threshold: 0.55
+    link_threshold: 0.55
+
+dqn_tfc_val:
+  algorithm: DQN
+  policy: MlpPolicy
+  seed_list: [42, 2024, 2025]
+  total_timesteps: 300000
+  selected_hyperparameters:
+    learning_rate: 0.0001
+    buffer_size: 100000
+    batch_size: 128
+    gamma: 0.99
+    train_freq: 4
+    target_update_interval: 1000
+    exploration_fraction: 0.2
+    exploration_final_eps: 0.05
+  selection_score_formula: "0.35*bensafe + 0.35*atkmit - 0.15*bendrop + 0.15*(1-norm_latency)"
+  selected_checkpoints:
+    42: 280000
+    2024: 295000
+    2025: 270000
+
+dqn_tfc_default:
+  algorithm: DQN
+  policy: MlpPolicy
+  seed_list: [42, 2024, 2025]
+  total_timesteps: 300000
+  hyperparameters:
+    learning_rate: 0.0001
+    buffer_size: 100000
+    batch_size: 128
+    gamma: 0.99
+    train_freq: 4
+    target_update_interval: 1000
+    exploration_fraction: 0.2
+    exploration_final_eps: 0.05
+  selected_checkpoints:
+    42: 300000
+    2024: 300000
+    2025: 300000
+
+ppo_tfc_val:
+  algorithm: PPO
+  policy: MlpPolicy
+  seed_list: [42, 2024, 2025]
+  total_timesteps: 300000
+  selected_hyperparameters:
+    learning_rate: 0.0003
+    n_steps: 2048
+    batch_size: 128
+    gamma: 0.99
+    gae_lambda: 0.95
+    clip_range: 0.2
+    ent_coef: 0.01
+  selection_score_formula: "0.35*bensafe + 0.35*atkmit - 0.15*bendrop + 0.15*(1-norm_latency)"
+  selected_checkpoints:
+    42: 260000
+    2024: 290000
+    2025: 275000
+
+ppo_tfc_default:
+  algorithm: PPO
+  policy: MlpPolicy
+  seed_list: [42, 2024, 2025]
+  total_timesteps: 300000
+  hyperparameters:
+    learning_rate: 0.0003
+    n_steps: 2048
+    batch_size: 128
+    gamma: 0.99
+    gae_lambda: 0.95
+    clip_range: 0.2
+    ent_coef: 0.01
+  selected_checkpoints:
+    42: 300000
+    2024: 300000
+    2025: 300000
+
+sap_tc_csc:
+  algorithm: Confidence-Score-Cutoff
+  type: oracle-supervised
+  note: "Selects action based on ground-truth label and detector confidence score"
+  deployable: false
+
+sap_tc_dt:
+  algorithm: Decision-Tree
+  type: oracle-supervised
+  note: "Decision tree trained on (detector output, ground-truth action) pairs"
+  deployable: false
+
+nobaseline:
+  type: no-control
+  action: Forward
+  deployable: true
+
+rulebased:
+  type: heuristic
+  action: "Forward if detector_confidence < 0.7 else Inspect"
+  deployable: true
+
+random:
+  type: random-uniform
+  actions: [Forward, Inspect, Mirror, Throttle, Reroute, Drop, Isolate]
+  deployable: true
+
+greedy:
+  type: greedy-security
+  action: Isolate
+  deployable: true
+
+environment:
+  num_actions: 7
+  action_names: [Forward, Inspect, Mirror, Throttle, Reroute, Drop, Isolate]
+  max_steps: 50000
+  state_dim: 48
+  detector_model: results/detector_results/edge_iiotset/xgboost.pkl
+  reward_weights:
+    attack_mitigated: 5.0
+    attack_detected: 2.0
+    benign_forwarded: 1.0
+    benign_dropped: 15.0
+    benign_throttled: 7.0
+    attack_missed: 8.0
+    latency: 0.5
+    resource_cost: 0.3
+    packet_loss: 1.0
+
+evaluation:
+  num_seeds: [42, 2024, 2025]
+  report_mean_std: true
+  max_eval_steps: 20000
+  metrics: [bensafe, atkmit, bendrop, sccl]

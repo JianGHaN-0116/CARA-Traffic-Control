@@ -1,0 +1,7 @@
+Split,Total windows,Attack ratio,Forward,Drop,Dominant action,Dominant fraction
+Edge-random train,106854,0.4697,0.5303,0.4697,Forward,0.5303
+Edge-random val,15179,0.4892,0.5108,0.4892,Forward,0.5108
+Edge-random test,30459,0.4806,0.5194,0.4806,Forward,0.5194
+Chrono train,90825,1.0000,0.0003,0.9997,Drop,0.9997
+Chrono val,16029,0.6076,0.3924,0.6076,Drop,0.6076
+Chrono test,30459,0.9158,0.0842,0.9158,Drop,0.9158

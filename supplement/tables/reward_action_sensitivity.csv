@@ -1,0 +1,8 @@
+variant,reward_term,value,BenSafe,StrictAtkMit,BenDrop,SCCL
+baseline,benign_dropped,-15,0.6807,0.9213,0.3193,3.72
+benign_dropped_50pct,benign_dropped,-10,0.6651,0.9188,0.3349,3.71
+benign_dropped_150pct,benign_dropped,-22.5,0.6952,0.9231,0.3048,3.73
+benign_throttled_50pct,benign_throttled,-3.5,0.679,0.92,0.321,3.72
+benign_throttled_150pct,benign_throttled,-10.5,0.6824,0.9225,0.3176,3.73
+attack_missed_50pct,attack_missed,-4,0.676,0.91,0.324,3.7
+attack_missed_150pct,attack_missed,-12,0.685,0.928,0.315,3.74

@@ -1,0 +1,8 @@
+controller,benign_tcp_mbps,benign_udp_mbps,attack_tcp_mbps,attack_udp_mbps,benign_loss_pct,attack_suppression_pct,rule_install_latency_ms,mean_ovs_flow_entries,ovs_cpu_pct,aggressive_on_benign_pct,aggressive_on_attack_pct
+NoControl,44.5,38.2,45.9,39.7,0.0,0.0,0.0,1.0,0.0,0.0,0.0
+Greedy,1.1,0.8,0.0,0.0,98.3,100.0,15.5,3.2,2.1,100.0,100.0
+CARA-TC,42.8,36.5,1.1,0.9,3.4,98.3,4.5,2.4,0.8,3.2,96.8
+DQN-TFC,25.4,21.6,4.5,3.8,47.5,90.0,10.1,2.8,1.5,40.0,86.4
+DQN-TFC_std,18.0,15.3,3.2,2.9,37.5,7.2,4.8,0.6,0.7,27.2,7.1
+PPO-TFC,43.1,36.8,44.2,38.1,1.2,3.8,0.3,1.0,0.1,0.0,0.0
+PPO-TFC_std,1.2,1.5,2.1,2.4,0.8,1.6,0.1,0.0,0.0,0.0,0.0

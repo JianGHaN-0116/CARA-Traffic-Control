@@ -1,0 +1,68 @@
+# DRL Configuration
+
+common:
+  seed: 42
+  num_seeds: [42, 2024, 2025]
+  tensorboard_log: results/drl_results/tensorboard/
+  checkpoint_dir: results/drl_results/checkpoints/
+  detector_model_path: results/detector_results/edge_iiotset/xgboost.pkl
+
+dqn:
+  policy: MlpPolicy
+  learning_rate: 0.0001
+  buffer_size: 100000
+  learning_starts: 5000
+  batch_size: 128
+  gamma: 0.99
+  train_freq: 4
+  target_update_interval: 1000
+  exploration_fraction: 0.2
+  exploration_final_eps: 0.05
+  total_timesteps: 300000
+
+ppo:
+  policy: MlpPolicy
+  learning_rate: 0.0003
+  n_steps: 2048
+  batch_size: 128
+  gamma: 0.99
+  gae_lambda: 0.95
+  clip_range: 0.2
+  ent_coef: 0.01
+  total_timesteps: 300000
+
+# Environment
+environment:
+  num_actions: 7
+  action_names:
+    - Forward
+    - Inspect
+    - Mirror
+    - Throttle
+    - Reroute
+    - Drop
+    - Isolate
+  max_steps: 50000
+  # 41 traffic features + 6 edge/resource features + detector_estimated_ratio
+  # + detector_confidence = 48
+  state_dim: 48
+
+# Reward weights (penalize benign disruption more than attack misses)
+reward:
+  attack_mitigated: 5.0
+  attack_detected: 2.0
+  benign_forwarded: 1.0
+  benign_dropped: 15.0   # up from 10: strongly penalize dropping benign traffic
+  benign_throttled: 7.0   # up from 5: penalize throttling benign traffic
+  attack_missed: 8.0
+  latency: 0.5
+  resource_cost: 0.3
+  packet_loss: 1.0
+  attack_threshold: 0.84
+
+# Windowing
+window:
+  size: 100
+  stride: 1
+  attack_threshold: 0.84
+  detector_ratio_threshold: 0.5

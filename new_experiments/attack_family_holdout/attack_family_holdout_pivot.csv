@@ -1,0 +1,6 @@
+,atkmit,atkmit,atkmit,atkmit,atkmit,atkmit,atkmit,atkmit,atkmit,bendrop,bendrop,bendrop,bendrop,bendrop,bendrop,bendrop,bendrop,bendrop,bensafe,bensafe,bensafe,bensafe,bensafe,bensafe,bensafe,bensafe,bensafe
+controller,CARA-TC,DQN-TFC,DQN-TFC-val,Greedy,NoControl,PPO-TFC,PPO-TFC-val,SAP-TC (CSC),SAP-TC (DT),CARA-TC,DQN-TFC,DQN-TFC-val,Greedy,NoControl,PPO-TFC,PPO-TFC-val,SAP-TC (CSC),SAP-TC (DT),CARA-TC,DQN-TFC,DQN-TFC-val,Greedy,NoControl,PPO-TFC,PPO-TFC-val,SAP-TC (CSC),SAP-TC (DT)
+held_out_family,,,,,,,,,,,,,,,,,,,,,,,,,,,
+DDoS,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.016856336099940104,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.9831436639000599,1.0,1.0,1.0,1.0,1.0
+MITM,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+Other_Attack,0.13793103448275862,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.9838829939776312,0.0,0.0,0.0,0.0,0.0,1.0,1.0,1.0,0.016117006022368797,1.0,1.0,1.0,1.0,1.0

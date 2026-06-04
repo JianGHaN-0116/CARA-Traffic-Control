@@ -1,0 +1,9 @@
+## Table 10: Compact OVS/Mininet Replay Summary
+
+| Controller | Benign TCP (Mbps) | Benign UDP (Mbps) | Attack TCP (Mbps) | Attack UDP (Mbps) | Benign Loss (%) | Attack Supp. (%) | Rule-install Lat. (ms) | OVS Flow Entries | OVS CPU (%) |
+|---|---|---|---|---|---|---|---|---|---|
+| NoControl | 44.5 | 38.2 | 45.9 | 39.7 | 0.0 | 0.0 | 0.0 | 1.0 | 0.0 |
+| Greedy | 1.1 | 0.8 | 0.0 | 0.0 | 98.3 | 100.0 | 15.5 | 3.2 | 2.1 |
+| CARA-TC | 42.8 | 36.5 | 1.1 | 0.9 | 3.4 | 98.3 | 4.5 | 2.4 | 0.8 |
+| DQN-TFC | 25.4 ± 18.0 | 21.6 ± 15.3 | 4.5 ± 3.2 | 3.8 ± 2.9 | 47.5 ± 37.5 | 90.0 ± 7.2 | 10.1 ± 4.8 | 2.8 ± 0.6 | 1.5 ± 0.7 |
+| PPO-TFC | 43.1 ± 1.2 | 36.8 ± 1.5 | 44.2 ± 2.1 | 38.1 ± 2.4 | 1.2 ± 0.8 | 3.8 ± 1.6 | 0.3 ± 0.1 | 1.0 ± 0.0 | 0.1 ± 0.0 |

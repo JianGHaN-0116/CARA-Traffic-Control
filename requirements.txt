@@ -1,0 +1,14 @@
+numpy
+pandas
+scikit-learn
+xgboost
+lightgbm
+matplotlib
+tqdm
+pyyaml
+joblib
+torch
+gymnasium
+stable-baselines3
+tensorboard
+seaborn

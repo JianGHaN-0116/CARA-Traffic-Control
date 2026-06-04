@@ -1,0 +1,4 @@
+condition,controller,bensafe,atkmit,bendrop,claim
+Full features,CARA-TC,0.9756005056890013,0.9387211367673179,0.024399494310998734,In-domain reference
+No endpoint/stream IDs,CARA-TC,0.3461441213653603,0.9515644213690395,0.6538558786346397,Not deployable
+No endpoint/stream IDs,Conservative Fallback,0.6580910240202276,0.2531766634786173,0.09115044247787611,Safe-but-under-mitigating

@@ -1,0 +1,5 @@
+• A leakage-safe framework evaluates detector-assisted edge-IIoT traffic control.
+• CARA-TC provides a transparent calibrated reference for learned controllers.
+• Controller rankings shift under feature artifacts and temporal score drift.
+• Cross-dataset transfer depends strongly on validation-side recalibration.
+• Compact OVS/tc replay confirms action executability without deployment overclaim.

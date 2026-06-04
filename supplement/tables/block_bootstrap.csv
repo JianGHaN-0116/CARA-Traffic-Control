@@ -1,0 +1,4 @@
+Controller,Metric,Std_CI_naive,Block100_CI,Inflation_Factor
+CARA-TC,BenSafe,0.0,0.0,1.0
+DQN-TFC-val,BenSafe,0.0057,0.0072,1.26
+PPO-TFC-val,BenSafe,0.2243,0.2491,1.11

@@ -1,0 +1,28 @@
+held_out_family,held_out_family_id,controller,bensafe,atkmit,bendrop
+DDoS,1,CARA-TC,1.0,0.0,0.0
+DDoS,1,Greedy,0.9831436639000599,0.0,0.016856336099940104
+DDoS,1,NoControl,1.0,0.0,0.0
+DDoS,1,DQN-TFC,1.0,0.0,0.0
+DDoS,1,PPO-TFC,1.0,0.0,0.0
+DDoS,1,DQN-TFC-val,1.0,0.0,0.0
+DDoS,1,PPO-TFC-val,1.0,0.0,0.0
+DDoS,1,SAP-TC (CSC),1.0,0.0,0.0
+DDoS,1,SAP-TC (DT),1.0,0.0,0.0
+Other_Attack,2,CARA-TC,1.0,0.13793103448275862,0.0
+Other_Attack,2,Greedy,0.016117006022368797,1.0,0.9838829939776312
+Other_Attack,2,NoControl,1.0,0.0,0.0
+Other_Attack,2,DQN-TFC,1.0,0.0,0.0
+Other_Attack,2,PPO-TFC,1.0,0.0,0.0
+Other_Attack,2,DQN-TFC-val,1.0,0.0,0.0
+Other_Attack,2,PPO-TFC-val,1.0,0.0,0.0
+Other_Attack,2,SAP-TC (CSC),1.0,0.0,0.0
+Other_Attack,2,SAP-TC (DT),1.0,0.0,0.0
+MITM,3,CARA-TC,1.0,0.0,0.0
+MITM,3,Greedy,1.0,0.0,0.0
+MITM,3,NoControl,1.0,0.0,0.0
+MITM,3,DQN-TFC,1.0,0.0,0.0
+MITM,3,PPO-TFC,1.0,0.0,0.0
+MITM,3,DQN-TFC-val,1.0,0.0,0.0
+MITM,3,PPO-TFC-val,1.0,0.0,0.0
+MITM,3,SAP-TC (CSC),1.0,0.0,0.0
+MITM,3,SAP-TC (DT),1.0,0.0,0.0

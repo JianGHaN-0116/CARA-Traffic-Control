@@ -1,0 +1,30 @@
+# Detector Configuration
+
+xgboost:
+  n_estimators: 300
+  max_depth: 6
+  learning_rate: 0.05
+  subsample: 0.8
+  colsample_bytree: 0.8
+  eval_metric: logloss
+
+random_forest:
+  n_estimators: 200
+  max_depth: 15
+  min_samples_split: 5
+  n_jobs: -1
+
+lightgbm:
+  n_estimators: 300
+  max_depth: 8
+  learning_rate: 0.05
+  subsample: 0.8
+  colsample_bytree: 0.8
+
+dnn:
+  hidden_layers: [256, 128, 64]
+  dropout: 0.3
+  learning_rate: 0.001
+  batch_size: 256
+  epochs: 50
+  early_stopping_patience: 5

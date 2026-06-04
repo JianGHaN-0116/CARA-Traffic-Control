@@ -1,0 +1,12 @@
+# Isolate Action - Complete Port Isolation via OpenFlow
+# Drops ALL traffic on the target host's port (both directions)
+#
+# Command (single-target mode):
+# ovs-ofctl -O OpenFlow13 add-flow s1 "priority=200,in_port={TARGET_PORT},actions=drop"
+#
+# Command (mixed mode - isolate both client and attacker ports):
+# ovs-ofctl -O OpenFlow13 add-flow s1 "priority=210,in_port={CLIENT_PORT},actions=drop"
+# ovs-ofctl -O OpenFlow13 add-flow s1 "priority=210,in_port={ATTACKER_PORT},actions=drop"
+#
+# Note: Isolate is stronger than Drop - it blocks ALL traffic on the port,
+# not just traffic to a specific destination

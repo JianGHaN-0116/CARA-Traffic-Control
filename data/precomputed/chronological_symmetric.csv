@@ -1,0 +1,11 @@
+controller,tuning_source,test_split,bensafe,atkmit,bendrop,latency
+CARA-TC,Edge-random (frozen),chronological,0.416,1.0,0.584,3.9714
+CARA-TC,Chrono-val (retuned),chronological,0.7318,1.0,0.2682,3.9519
+DQN-TFC,Edge-random (frozen),chronological,0.7938,1.0,0.2062,2.5126
+DQN-TFC,Chrono (retrained),chronological,0.7879,0.1677,0.2121,3.6582
+CostSensitiveClassifier,Edge-random (frozen),chronological,0.4351,1.0,0.5649,3.8221
+CostSensitiveClassifier,Chrono (retrained),chronological,0.0,1.0,1.0,3.8229
+ContextualBandit,Edge-random (frozen),chronological,0.0,0.8321,0.9166,2.631
+ContextualBandit,Chrono (retrained),chronological,0.0027,0.9994,0.0538,2.5437
+DecisionTree,Edge-random (frozen),chronological,0.4312,1.0,0.5688,3.8222
+DecisionTree,Chrono (retrained),chronological,0.0,1.0,1.0,3.8229

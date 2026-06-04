@@ -1,0 +1,15 @@
+# Mirror Action - Port Mirroring via OVS
+# All traffic on the switch is mirrored to the IDS port
+#
+# Command (single-target mode):
+# ovs-vsctl -- --id=@src get Port s1-eth{TARGET_PORT} \
+#           -- --id=@dst get Port s1-eth{IDS_PORT} \
+#           -- --id=@m create Mirror name=m0 select-src-port=@src select-dst-port=@src output-port=@dst \
+#           -- set Bridge s1 mirrors=@m
+#
+# Command (mixed mode - mirror both client and attacker):
+# ovs-vsctl -- --id=@c get Port s1-eth{CLIENT_PORT} \
+#           -- --id=@a get Port s1-eth{ATTACKER_PORT} \
+#           -- --id=@dst get Port s1-eth{IDS_PORT} \
+#           -- --id=@m create Mirror name=m0 select-src-port=@c,@a select-dst-port=@c,@a output-port=@dst \
+#           -- set Bridge s1 mirrors=@m

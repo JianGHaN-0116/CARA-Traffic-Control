@@ -1,0 +1,13 @@
+Scenario,Controller,Benign TCP (Mbps),Benign loss (%),Attack TCP (Mbps),Attack loss (%)
+Single-targeted,NoControl,90.8,0.0,90.8,0.0
+Single-targeted,Greedy,1.5,98.3,0.0,100.0
+Single-targeted,CARA-TC,87.7,3.4,1.5,98.3
+Single-targeted,DQN-TFC (seed=42),0.0,100.0,0.0,100.0
+Single-targeted,DQN-TFC (seed=2024),76.9,15.3,15.1,83.3
+Single-targeted,DQN-TFC (seed=2025),66.2,27.1,12.1,86.7
+Two-switch mixed,NoControl,45.5,0.0,49.3,0.0
+Two-switch mixed,Greedy,0.4,98.3,0.0,100.0
+Two-switch mixed,CARA-TC,44.0,3.4,1.0,98.3
+Two-switch mixed,DQN-TFC (seed=42),0.0,100.0,0.0,100.0
+Two-switch mixed,DQN-TFC (seed=2024),39.5,15.3,7.3,83.3
+Two-switch mixed,DQN-TFC (seed=2025),36.6,27.1,6.0,86.7

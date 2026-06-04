@@ -1,0 +1,6 @@
+controller,split,goodput,attack_mitigation_rate,benign_drop_rate,f1,fpr,avg_latency,avg_reward,steps,oracle_labels,deployable
+NoControl,ep-disjoint,0.0,0.0,0.0,,,,,,,
+Greedy,ep-disjoint,0.0,1.0,0.0,,,,,,,
+CARA-TC,ep-disjoint,0.0,1.0,0.0,1.0,0.0,2.724781685820843,3.432471221457037,1431.0,,
+SAP-TC (CSC),ep-disjoint,0.0,1.0,0.0,,,,,,train_only,No
+SAP-TC (DT),ep-disjoint,0.0,1.0,0.0,,,,,,train_only,No
