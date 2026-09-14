@@ -1,0 +1,117 @@
+# Dataset Configuration
+# Supported datasets: edge_iiotset, cicids2017, cicids2018
+
+edge_iiotset:
+  raw_dir: data/raw/edge_iiotset
+  raw_file: ML-EdgeIIoT-dataset.csv
+  label_col_attack: Attack_label
+  label_col_type: Attack_type
+  attack_mapping:
+    Normal: 0
+    DDoS_UDP: 1
+    DDoS_TCP: 1
+    DDoS_HTTP: 1
+    SQL_injection: 2
+    Backdoor: 2
+    Vulnerability_scanner: 2
+    MITM: 3
+    Password: 2
+    Port_Scanning: 2
+    Reconnaissance: 2
+    XSS: 2
+    Ransomware: 2
+    Fingerprinting: 2
+    Uploading_attack: 2
+  category_mapping:
+    0: Benign
+    1: DDoS
+    2: Other_Attack
+    3: MITM
+
+cicids2017:
+  raw_dir: data/raw/cicids2017
+  files:
+    - Monday-WorkingHours.pcap_ISCX.csv
+    - Tuesday-WorkingHours.pcap_ISCX.csv
+    - Wednesday-workingHours.pcap_ISCX.csv
+    - Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv
+    - Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv
+    - Friday-WorkingHours-Morning.pcap_ISCX.csv
+    - Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv
+    - Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv
+  label_col: Label
+  attack_mapping:
+    BENIGN: 0
+    DoS Hulk: 1
+    DDoS: 1
+    PortScan: 2
+    DoS GoldenEye: 1
+    FTP-Patator: 3
+    SSH-Patator: 3
+    DoS slowloris: 1
+    DoS Slowhttptest: 1
+    Bot: 4
+    Web Attack  Brute Force: 5
+    Web Attack  XSS: 5
+    Web Attack  Sql Injection: 5
+    Infiltration: 6
+    Heartbleed: 7
+  category_mapping:
+    0: Benign
+    1: DDoS_DoS
+    2: PortScan
+    3: BruteForce
+    4: Bot
+    5: WebAttack
+    6: Infiltration
+    7: Heartbleed
+
+cicids2018:
+  raw_dir: data/raw/cicids2018
+  files:
+    - Friday-02-03-2018_TrafficForML_CICFlowMeter.csv
+    - Friday-16-02-2018_TrafficForML_CICFlowMeter.csv
+    - Friday-23-02-2018_TrafficForML_CICFlowMeter.csv
+    - Thuesday-20-02-2018_TrafficForML_CICFlowMeter.csv
+    - Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv
+    - Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv
+    - Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv
+    - Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv
+    - Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv
+    - Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv
+  label_col: Label
+  category_mapping:
+    0: Benign
+    1: DDoS_DoS
+    2: Bot
+    3: BruteForce
+    4: WebAttack
+    5: Infiltration
+    6: Other_Attack
+
+nf_uq_nids_v2:
+  raw_dir: data/raw/nf_uq_nids_v2
+  raw_file: NF-UQ-NIDS-v2.csv
+  label_col: Label
+  category_mapping:
+    0: Benign
+    1: DDoS_DoS
+    2: Scan
+    3: BruteForce
+    4: Bot
+    5: Infiltration
+
+# Common feature subset for cross-dataset experiments
+common_features:
+  - duration
+  - packet_count
+  - byte_count
+  - packet_rate
+  - byte_rate
+  - avg_packet_size
+  - src_port
+  - dst_port
+  - protocol
+  - flow_iat_mean
+  - flow_iat_std
+  - tcp_flag_count

@@ -1,0 +1,3 @@
+# Forward Action - Default Flow Table
+# No explicit rule installed; uses default NORMAL action
+# ovs-ofctl -O OpenFlow13 add-flow s1 "priority=0,actions=NORMAL"

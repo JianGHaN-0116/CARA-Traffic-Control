@@ -1,0 +1,8 @@
+# Inspect Action - Mirror traffic to IDS port
+# Traffic is forwarded normally AND copied to IDS for deep inspection
+# 
+# Command:
+# ovs-ofctl -O OpenFlow13 add-flow s1 "priority=100,ip,nw_dst=10.0.0.200,actions=output:IDS_PORT"
+#
+# Note: IDS_PORT is the port number connected to the IDS host (typically port 3)
+# In the single-switch topology: s1-eth3 connects to ids host

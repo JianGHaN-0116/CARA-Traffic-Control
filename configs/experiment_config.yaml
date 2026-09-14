@@ -1,0 +1,88 @@
+# Experiment Configuration
+
+data_split:
+  train_ratio: 0.7
+  val_ratio: 0.1
+  test_ratio: 0.2
+  split_by_time: true
+
+evaluation:
+  num_seeds: [42, 2024, 2025]
+  report_mean_std: true
+  max_eval_steps: 20000
+
+ablation:
+  variants:
+    - name: full_model
+      description: Full model with all components
+      remove_actions: []
+      remove_state_features: []
+      reward_modifications: {}
+
+    - name: w/o_traffic_control
+      description: Only Forward and Inspect actions
+      remove_actions: [2, 3, 4, 5, 6]
+      remove_state_features: []
+      reward_modifications: {}
+
+    - name: w/o_resource_state
+      description: Remove edge resource state features
+      remove_actions: []
+      remove_state_features: [edge_cpu, edge_memory, queue_length, link_utilization, packet_loss]
+      reward_modifications: {}
+
+    - name: w/o_detector_confidence
+      description: Remove detector confidence from state
+      remove_actions: []
+      remove_state_features: [detector_confidence]
+      reward_modifications: {}
+
+    - name: w/o_attack_ratio_state
+      description: Remove attack_ratio from state
+      remove_actions: []
+      remove_state_features: [attack_ratio]
+      reward_modifications: {}
+
+    - name: w/o_fp_penalty
+      description: Remove benign traffic disruption penalty
+      remove_actions: []
+      remove_state_features: []
+      reward_modifications:
+        benign_dropped: 0.0
+        benign_throttled: 0.0
+
+    - name: w/o_fn_penalty
+      description: Remove attack missed penalty
+      remove_actions: []
+      remove_state_features: []
+      reward_modifications:
+        attack_missed: 0.0
+
+    - name: w/o_mitigation_reward
+      description: Remove attack mitigation reward
+      remove_actions: []
+      remove_state_features: []
+      reward_modifications:
+        attack_mitigated: 0.0
+        attack_detected: 0.0
+
+    - name: w/o_reroute_throttle
+      description: Remove moderate control actions (Throttle, Reroute)
+      remove_actions: [3, 4]
+      remove_state_features: []
+      reward_modifications: {}
+
+unseen_attacks:
+  edge_iiotset:
+    train_attacks: [1, 2]   # DDoS, Other_Attack
+    test_attacks: [3]        # MITM
+  cicids2017:
+    train_attacks: [1, 2, 3]  # DDoS_DoS, PortScan, BruteForce
+    test_attacks: [4, 5, 6]   # Bot, WebAttack, Infiltration
+
+cross_dataset:
+  experiments:
+    - train: edge_iiotset
+      test: cicids2017
+    - train: cicids2017
+      test: cicids2018

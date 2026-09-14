@@ -1,0 +1,83 @@
+# ══════════════════════════════════════════════════════════════════════
+# CARA-Traffic-Control — public repository policy
+#
+# The manuscript is under review. To avoid the method, experimental design,
+# numerical results, and supplementary material being borrowed before
+# publication, the PUBLIC repository tracks CODE ONLY.
+#
+# Withheld from the public repo (provided to reviewers through the journal's
+# confidential channel instead):
+#   supplement/        supplementary material (S1–S7, tables, cover letter)
+#   outputs/           paper figures and paper tables
+#   results/           detector models, RL checkpoints, tensorboard logs
+#   data/              pre-computed evidence CSVs, scalers, feature metadata
+#   new_experiments/   per-experiment result CSVs
+#   checkpoints/       model checkpoints
+#   *.zip              frozen release packages
+# ══════════════════════════════════════════════════════════════════════
+
+# ── Withheld paper content (NOT tracked) ─────────────────────────────
+supplement/
+outputs/
+results/
+data/
+new_experiments/
+checkpoints/
+*.zip
+
+# Reviewer-facing reproduction drivers (read the withheld result data and
+# encode the paper's table structure; shipped with the confidential artifact)
+scripts/reproduce_result_tables.py
+scripts/reproduce_feature_ablation.py
+scripts/reproduce_nonoverlap_robustness.py
+scripts/reproduce_chronological_symmetric.py
+scripts/reproduce_oracle_label_distribution.py
+scripts/reproduce_no_rho_ablation.py
+scripts/reproduce_ovs_summary.py
+
+# Internal notes / paper result registries (NOT tracked)
+MIGRATION_GUIDE.md
+REPRODUCIBILITY.md
+results_registry.csv
+table_mapping.md
+
+# ── Python ───────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# ── IDE / OS ─────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Logs / temp ──────────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+*.ipynb_checkpoints/

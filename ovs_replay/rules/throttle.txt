@@ -1,0 +1,13 @@
+# Throttle Action - Rate Limiting via tc (traffic control)
+# Limits bandwidth on the target host's interface
+#
+# Command (single-target mode):
+# tc qdisc replace dev {TARGET_INTF} root tbf rate 5mbit burst 32kbit latency 80ms
+#
+# Command (mixed mode - throttle on bottleneck link):
+# tc qdisc replace dev {EDGE_TO_AGG_INTF} root tbf rate 5mbit burst 32kbit latency 80ms
+#
+# Parameters:
+#   rate: 5mbit (can be adjusted: 1-50 mbit)
+#   burst: 32kbit (token bucket burst size)
+#   latency: 80ms (maximum latency)

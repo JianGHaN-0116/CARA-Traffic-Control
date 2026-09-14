@@ -1,0 +1,11 @@
+# Drop Action - Packet Dropping via OpenFlow
+# Drops all traffic from/to the target host
+#
+# Command (single-target mode):
+# ovs-ofctl -O OpenFlow13 add-flow s1 "priority=200,in_port={TARGET_PORT},ip,nw_dst=10.0.0.4,actions=drop"
+#
+# Command (mixed mode - drop all traffic to server):
+# ovs-ofctl -O OpenFlow13 add-flow s1 "priority=200,ip,nw_dst=10.0.0.4,actions=drop"
+#
+# Note: In the replay, we use nw_dst=10.0.0.4 (server IP) to drop traffic
+# destined to the server from the attacker's port
